@@ -43,21 +43,25 @@ p {
     color: #545454;
     letter-spacing: .5px;
 }
-
 .mb-1 {
     margin-bottom: 10px;
 }
 .mt-3 {
     margin-top: 30px;
 }
-
 .pt-5 {
     padding-top: 50px;
 }
 .pt-10 {
     padding-top: 100px;
 }
-
+.pb-10 {
+    padding-top: 100px;
+}
+.py-10 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 .btn {
     position: relative;
     color: #fff;
@@ -79,18 +83,16 @@ p {
     z-index: -1;
     transition: width .4s;
 }
-
 .btn:hover::after {
     width: 100%;
 }
-
 .btn-link {
     display: inline-block;
     text-decoration: none;
 }
 
 
-
+/* Appearance Ended && Hero Start */
 
 
 .hero {
@@ -99,26 +101,108 @@ p {
     background-size: auto;
     background-position: top left;
 }
-
 .row {
     display: flex;
     justify-content: space-between;
 }
-
-.col-1,
-.col-2 {
+.col-5 {
     width: 50%;
 }
-
 .hero-left h1 span {
     color: #FB6A58;
 }
-
-
-
 .hero-right {
     text-align: right;
 }
 .hero-right img {
     width: 70%;
+}
+
+
+/* Hero Ended && Dream Section Start */
+
+.dream {
+    background-image: url('img/dream-bg.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right center;
+}
+
+.dream-left img {
+    width: 80%;
+}
+
+/* Experience Section Start */
+
+.exp {
+    background-image: url('img/exp-bg.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left center;
+}
+.exp-item {
+    width: 90%;
+    margin: auto;
+    box-shadow: 10px 10px 20px #d2d2d2;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    border-image: linear-gradient(blue, #FB6A58);
+    border-left: 10px solid;
+    border-image-slice: 1;
+}
+.exp-item h4 {
+    color: #FB6A58;
+}
+
+@media all and (max-width: 992px) {
+
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    .hero-right img {
+        width: 75%;
+    }
+
+    .dream-left img {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .row {
+        flex-direction: column;
+    }
+    .col-5 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+
+    .hero-left{
+        order: 1;
+        margin-top: 80px;
+    }
+    .hero-right,
+    .dream-left {
+        text-align: center;
+    }
+    .hero-right img {
+        width: 75%;
+    }
+
+    .dream-left img {
+        width: 90%;
+    }
+    .exp-item:first-child {
+        margin-bottom: 50px;
+    }
 }
