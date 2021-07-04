@@ -1,0 +1,124 @@
+@font-face {
+    font-family: roboto;
+    src: url('lib/font/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url('lib/font/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: roboto-bold;
+    src: url('lib/font/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: roboto-black;
+    src: url('lib/font/Roboto-Black.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: roboto;
+}
+h1 {
+    font-family: roboto-black;
+    font-size: 58px;
+    color: #333333;
+}
+h2 {
+    font-family: roboto-bold;
+    font-size: 50px;
+    color: #333333;
+}
+h4 {
+    font-family: roboto-medium;
+    font-size: 20px;
+    color: #333333;
+}
+p {
+    font-size: 18px;
+    color: #545454;
+    letter-spacing: .5px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+.mt-3 {
+    margin-top: 30px;
+}
+
+.pt-5 {
+    padding-top: 50px;
+}
+.pt-10 {
+    padding-top: 100px;
+}
+
+.btn {
+    position: relative;
+    color: #fff;
+    background-color: #FB6A58;
+    font-size: 20px;
+    font-family: roboto-medium;
+    text-transform: capitalize;
+    padding: 15px 35px;
+    z-index: 1;
+}
+.btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    content: '';
+    background-color: #f94630;
+    z-index: -1;
+    transition: width .4s;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.btn-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+
+
+.hero {
+    background-image: url('img/top-banner.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top left;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-1,
+.col-2 {
+    width: 50%;
+}
+
+.hero-left h1 span {
+    color: #FB6A58;
+}
+
+
+
+.hero-right {
+    text-align: right;
+}
+.hero-right img {
+    width: 70%;
+}
